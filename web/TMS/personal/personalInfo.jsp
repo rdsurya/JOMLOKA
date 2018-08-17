@@ -70,18 +70,7 @@
                 <input type="text" class="form-control" id="regSex" readonly value="<%=gender%>"/>
             </div>
         </div>
-        <div class="form-group">
-
-            <label for="regCountry" class="col-sm-3 control-label">
-                Country of Origin:
-            </label>
-            <div class="col-sm-9">
-                <input type="text" class="form-control" id="regCountry" required readonly value="<%=nationality%>"/>
-                <div id="regCountryMatch" class="search-drop">
-                    <!--search result-->
-                </div>
-            </div>
-        </div>
+       
         <div class="form-group">
 
             <label for="regPhone" class="col-sm-3 control-label">

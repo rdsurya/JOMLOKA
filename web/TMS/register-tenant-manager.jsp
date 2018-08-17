@@ -19,7 +19,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>HIS CARE</title>
+        <title>JOMLOKA</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <%@include file="libraries/headLibrary.jsp" %>
@@ -457,7 +457,7 @@
                                            window.location="http://staging.mkagtechnologies.com/his-care/";
                                         }
                                         else if(fromPage==="JOMLOKA"){
-                                            window.location="http://staging.mkagtechnologies.com/jomloka/";
+                                            window.location="../Main/";
                                         }
                                         else{
                                             location.reload();

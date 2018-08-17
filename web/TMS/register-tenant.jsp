@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>HIS CARE</title>
+        <title>JOMLOKA</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <%@include file="libraries/headLibrary.jsp" %>
@@ -143,7 +143,7 @@
 
                 <div id="mainBody" class="panel-body login_body" style="max-height: 100vh; overflow: auto;">
 
-                    <form id="tenant-form" class="form-horizontal">
+                    <form id="tenant-form" class="form-horizontal" autocomplete="off">
                         <fieldset class="steps step1 activate" data-number='1'>
                             <h2>Provider Info</h2>
                             <div class="form-group">
@@ -401,8 +401,7 @@
                                 $phone = $("#inputMobile"),
                                 $email = $("#inputEmail"),
                                 $package = $("#inputPackage"),
-                                $file1 = $("#file-drag1"),
-                                $file2 = $("#file-drag2");
+                                $file1 = $("#file-drag1");
 
                         var input = {
                             provider: $provider.val(),

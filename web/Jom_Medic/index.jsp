@@ -143,117 +143,166 @@
 
                 <div id="mainBody" class="panel-body login_body" style="max-height: 100vh; overflow: auto;">
 
-                    <form id="tenant-form" class="form-horizontal">
-                        <fieldset class="steps step1 activate" data-number='1'>
-                            <h2>Provider Info</h2>
-                            <div class="form-group">
-                                <div class="col-md-12"><label class="control-label" for="company_name">Provider Name:</label></div>
-                                <div class="col-md-12">
-                                    <input id="inputProviderName" type="text" class="form-control input-lg" name="provider" maxlength="200" required>
-                                </div>
-                            </div>
+                    <form id="hour-form" class="form-horizontal">
+                        <fieldset class="steps step5 activate">
+                            <h2>Operation Hours</h2>
+                            <h5>Please enter the time using 24-hour system('HH:mm') format. Example '01:30'. Enter 'OFF' for holiday.</h5>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-1">
+                                    <label class="control-label" for="company_name">Monday:</label>
+                                </div>
+                                <div class="col-md-5">
                                     <div class="form-group">
-                                        <div class="col-md-12"><label class="control-label" for="company_name">Building Number:</label></div>
                                         <div class="col-md-12">
-                                            <input id="inputBuildingNo" type="text" class="form-control input-lg" name="building" maxlength="40" required>
+                                            <input id="inputFrom1" type="text" class="form-control input-lg time-input time-from" required>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-1">
+                                    <label class="control-label text-center" for="company_name">To</label>
+                                </div>
+                                <div class="col-md-5">
                                     <div class="form-group">
-                                        <div class="col-md-12"><label class="control-label" for="company_name">Street Name:</label></div>
                                         <div class="col-md-12">
-                                            <input id="inputStreet" type="text" class="form-control input-lg" name="street" maxlength="40" required>
+                                            <input id="inputTo1" type="text" class="form-control input-lg time-input time-to" required>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-1">
+                                    <label class="control-label" for="company_name">Tuesday:</label>
+                                </div>
+                                <div class="col-md-5">
                                     <div class="form-group">
-                                        <div class="col-md-12"><label class="control-label" for="company_name">Postcode:</label></div>
                                         <div class="col-md-12">
-                                            <input id="inputPostcode" type="text" class="form-control input-lg" name="inputUserID" required autocomplete="off">
-                                            <div id="inputPostcodeMatch"></div>
+                                            <input id="inputFrom2" type="text" class="form-control input-lg time-input time-from" required>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <div class="col-md-12"><label class="control-label" for="company_name">Town:</label></div>
-                                        <div class="col-md-12">
-                                            <input id="inputTown" type="text" class="form-control input-lg" name="inputUserID" required autocomplete="off">
-                                            <div id="inputTownMatch"></div>
-                                        </div>
-                                    </div>
+                                <div class="col-md-1">
+                                    <label class="control-label text-center" for="company_name">To</label>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-5">
                                     <div class="form-group">
-                                        <div class="col-md-12"><label class="control-label" for="company_name">District:</label></div>
                                         <div class="col-md-12">
-                                            <input id="inputDistrict" type="text" class="form-control input-lg" name="inputUserID" required autocomplete="off">
-                                            <div id="inputDistrictMatch"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <div class="col-md-12"><label class="control-label" for="company_name">State:</label></div>
-                                        <div class="col-md-12">
-                                            <input id="inputState" type="text" class="form-control input-lg" name="inputUserID" required autocomplete="off">
-                                            <div id="inputStateMatch"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-12"><label class="control-label" for="company_name">Country:</label></div>
-                                <div class="col-md-12">
-                                    <input id="inputCountry" type="text" class="form-control input-lg" required autocomplete="off">
-                                    <div id="inputCountryMatch"></div>
-                                </div>
-                            </div>
-
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <div class="col-md-12"><label class="control-label" for="company_name">Mobile:</label></div>
-                                        <div class="col-md-12">
-                                            <input id="inputMobile" type="text" class="form-control input-lg" name="mobile" maxlength="20" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <div class="col-md-12"><label class="control-label" for="company_name">E-mail:</label></div>
-                                        <div class="col-md-12">
-                                            <input id="inputEmail" type="text" class="form-control input-lg" name="inputUserID" maxlength="100" required>
+                                            <input id="inputTo2" type="text" class="form-control input-lg time-input time-to" required>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-1">
+                                    <label class="control-label" for="company_name">Wednesday:</label>
+                                </div>
+                                <div class="col-md-5">
                                     <div class="form-group">
-                                        <div class="col-md-12"><label class="control-label" for="company_name">Bank:</label></div>
                                         <div class="col-md-12">
-                                            <select id="inputBank" class="form-control input-lg"></select>
+                                            <input id="inputFrom3" type="text" class="form-control input-lg time-input time-from" required>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-1">
+                                    <label class="control-label text-center" for="company_name">To</label>
+                                </div>
+                                <div class="col-md-5">
                                     <div class="form-group">
-                                        <div class="col-md-12"><label class="control-label" for="company_name">Bank Account No:</label></div>
                                         <div class="col-md-12">
-                                            <input id="inputAccount" type="text" class="form-control input-lg" name="bank" maxlength="10" required>
+                                            <input id="inputTo3" type="text" class="form-control input-lg time-input time-to" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <label class="control-label" for="company_name">Thursday:</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <input id="inputFrom4" type="text" class="form-control input-lg time-input time-from" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <label class="control-label text-center" for="company_name">To</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <input id="inputTo4" type="text" class="form-control input-lg time-input time-to" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <label class="control-label" for="company_name">Friday:</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <input id="inputFrom5" type="text" class="form-control input-lg time-input time-from" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <label class="control-label text-center" for="company_name">To</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <input id="inputTo5" type="text" class="form-control input-lg time-input time-to" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <label class="control-label" for="company_name">Saturday:</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <input id="inputFrom6" type="text" class="form-control input-lg time-input time-from" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <label class="control-label text-center" for="company_name">To</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <input id="inputTo6" type="text" class="form-control input-lg time-input time-to" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <label class="control-label" for="company_name">Sunday:</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <input id="inputFrom7" type="text" class="form-control input-lg time-input time-from" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <label class="control-label text-center" for="company_name">To</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <input id="inputTo7" type="text" class="form-control input-lg time-input time-to" required>
                                         </div>
                                     </div>
                                 </div>
@@ -263,7 +312,7 @@
                     </form>
 
                     <fieldset class="steps step3 activate" data-number='3'>
-                        <h2>Upload Logo</h2>
+                        <h2>Upload Document</h2>
                         <div class="row">
                             <div class="col-md-12">
                                 <form id="file-upload-form" class="uploader">
@@ -272,7 +321,7 @@
                                     <label for="file-upload" id="file-drag1" class="upload-box">
                                         <div id="start">
                                             <i class="fa fa-download" aria-hidden="true"></i>
-                                            <h4>Upload Your Logo</h4>
+                                            <h4>Upload Annual Practicing Certificate</h4>
                                             <div>Select a file or drag here</div>
                                             <div id="notimage" class="hidden">Please select an image</div>
                                             <span id="file-upload-btn1" class="btn btn-primary">Select a file</span>
@@ -281,22 +330,34 @@
                                 </form>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form id="file-upload-form" class="uploader">
+                                    <input id="file-upload2" class="file-upload" type="file" name="fileUpload" style="display: none;" accept="image/*" />
+
+                                    <label for="file-upload" id="file-drag2" class="upload-box">
+                                        <div id="start">
+                                            <i class="fa fa-download" aria-hidden="true"></i>
+                                            <h4>Upload Business License Certificate</h4>
+                                            <div>Select a file or drag here</div>
+                                            <div id="notimage" class="hidden">Please select an image</div>
+                                            <span id="file-upload-btn2" class="btn btn-primary">Select a file</span>
+                                        </div>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
                     </fieldset>
-                    
+
                     <fieldset class="steps step2 activate" data-number='2'>
-                        <h2>Tenant Type</h2>
+                        <h2>Service Type</h2>
                         <input type="hidden" id="inputPackage" />
                         <div class="row">
                             <div class="col-md-12">
-                                <h3>Select a type</h3>
+                                <h3>Select service</h3>
+                                <h5>Click to select and click again to unselect</h5>
                                 <div id="serviceList" class="row">
-                                    <div class="col-md-4"> 
-                                        <div class="service-box"> 
-                                            <i class="fa fa-thumbs-up"></i>
-                                            <h4>JOMLOKA-Medic</h4>  
-                                            <input type="hidden" id="pack_cd" value="jlk_medic"/>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -322,9 +383,9 @@
                 <div class="login_logo text-center">
                     <div id="keterangan1" class="keterangan activate ">
                         <img class="keterangan-logo" src="../assets/hospital.svg">
-                        <h3>Create Tenant Account</h3>
-                        <p>You are just a few steps away.</p>
-                        <p>Complete the form by filling in your provider details.</p>
+                        <h3>Set Up JOMLOKA-Medic</h3>
+                        <p>You are almost there.</p>
+                        <p>Complete the form to set up your service.</p>
                         <p>Select a package that suits your business.</p>
                         <p>Upload some valid supporting documents.</p>
                     </div>                   
@@ -354,27 +415,44 @@
 
             $(function () {
 
-                getEmailPhone();
+                //bind time input with time validation
+                $(".time-input").on("change keyup keypress", function () {
+                    
+                    var strOff = $(this).val().toUpperCase();
+                    if(strOff === "OFF"){
+                        var className = ".time-from";
+                        if($(this).hasClass("time-from")){
+                            className = ".time-to";
+                        }
+                        
+                        $(this).closest(".row").find(className).val(strOff);
+                        $(this).val(strOff);
+                        $(this).removeClass("alert-danger");
+                        return;
+                    }
+                    
+                    var isValid = /^([0-1][0-9]|2[0-3]):([0-5][0-9])$/.test($(this).val());
+                    console.log($(this).val() + " - " + isValid);
+                    if (isValid) {
+                        $(this).removeClass("alert-danger");
+                    } else {
+                        $(this).addClass("alert-danger");
+                    }
+                });
+
+                getServiceOption();
 
                 initDropzone("file-drag1", "file-upload-btn1");
-               
-                populateSelectList($("#inputBank"), "0097");
-
-                initFlexData("inputPostcode", "inputPostcodeMatch", "control/getDetailFlexList.jsp", "0079");
-                initFlexData("inputTown", "inputTownMatch", "control/getDetailFlexList.jsp", "0003");
-                initFlexData("inputDistrict", "inputDistrictMatch", "control/getDetailFlexList.jsp", "0078");
-                initFlexData("inputState", "inputStateMatch", "control/getDetailFlexList.jsp", "0002");
-                initFlexData("inputCountry", "inputCountryMatch", "control/getDetailFlexList.jsp", "0001");
-
-                //getPackageOption();
+                initDropzone("file-drag2", "file-upload-btn2");
 
                 $("#serviceList").on("click", ".service-box", function () {
-                    $(".service-box").removeClass("alert-success");
                     $(".service-box").removeClass("alert-warning");
-                    $(this).addClass("alert-success");
-                    var input = $(this).find("#pack_cd").val();
-                    $("#inputPackage").val(input);
-                    console.log(input);
+
+                    if ($(this).hasClass("alert-success")) {
+                        $(this).removeClass("alert-success");
+                    } else {
+                        $(this).addClass("alert-success");
+                    }
 
                 });
 
@@ -388,51 +466,46 @@
                 $("#btnSubmit").on("click", function () {
                     if (validateInput()) {
 
-                        var $provider = $("#inputProviderName"),
-                                $buildingNo = $("#inputBuildingNo"),
-                                $street = $("#inputStreet"),
-                                $postcode = $("#inputPostcode"),
-                                $town = $("#inputTown"),
-                                $district = $("#inputDistrict"),
-                                $state = $("#inputState"),
-                                $country = $("#inputCountry"),
-                                $bankName = $("#inputBank"),
-                                $bankAcc = $("#inputAccount"),
-                                $phone = $("#inputMobile"),
-                                $email = $("#inputEmail"),
-                                $package = $("#inputPackage"),
-                                $file1 = $("#file-drag1"),
-                                $file2 = $("#file-drag2");
+                        var $time_input = $(".time-input"),
+                            $package = $("#serviceList .service-box");
+                            
+                        var time = [];
+                        $time_input.each(function(i){
+                            time.push($(this).val());
+                        });
+                        
+                        var package = [];
+                        $package.each(function(i){
+                            if($(this).hasClass("alert-success")){
+                                var code = $(this).find("#pack_cd").val();
+                                package.push(code);
+                            }
+                        });
+                        
+                        var $file1= $("#file-drag1"),
+                            $file2 = $("#file-drag2");
 
                         var input = {
-                            provider: $provider.val(),
-                            buildingNo: $buildingNo.val(),
-                            street: $street.val(),
-                            postcode: $postcode.val(),
-                            town: $town.val(),
-                            district: $district.val(),
-                            state: $state.val(),
-                            country: $country.val(),
-                            bankName: $bankName.val(),
-                            bankAcc: $bankAcc.val(),
-                            phone: $phone.val(),
-                            email: $email.val(),
-                            package: $package.val(),
-                            file1: $file1.find("img").attr("src")
+                            time: JSON.stringify(time),
+                            package: JSON.stringify(package),
+                            apc : $file1.find("img").attr("src"),
+                            blc : $file2.find("img").attr("src")
                         };
 
-                        console.log(input.file1);
+                        console.log(input);
+                        //return; //------delete later
                         var dialog = bootbox.dialog({
                             title: 'Processing your data',
                             message: '<p><i class="fa fa-spin fa-spinner"></i> Loading...</p>'
                         });
                         $.ajax({
                             type: 'POST',
-                            url: "control/insertTenant.jsp",
+                            url: "control/insertService.jsp",
                             timeout: 60000,
                             data: input,
                             dataType: 'json',
                             success: function (data, textStatus, jqXHR) {
+                                  
                                 bootbox.alert(data.msg, function () {
                                     if (!data.isValid) {
                                         console.log(data.sql);
@@ -455,112 +528,45 @@
             });//end ready...
 
             function validateInput() {
-                var $provider = $("#inputProviderName"),
-                        $buildingNo = $("#inputBuildingNo"),
-                        $street = $("#inputStreet"),
-                        $postcode = $("#inputPostcode"),
-                        $town = $("#inputTown"),
-                        $district = $("#inputDistrict"),
-                        $state = $("#inputState"),
-                        $country = $("#inputCountry"),
-                        $bankName = $("#inputBank"),
-                        $bankAcc = $("#inputAccount"),
-                        $phone = $("#inputMobile"),
-                        $email = $("#inputEmail"),
-                        $package = $("#inputPackage"),
-                        $file1 = $("#file-drag1");
-
-                if ($provider.val() === "") {
-                    bootbox.alert("Please enter provider name!");
-                    return false;
-                }
-
-                if ($buildingNo.val() === "") {
-                    bootbox.alert("Please enter building number!");
-                    return false;
-                }
-
-                if ($street.val() === "") {
-                    bootbox.alert("Please enter street name!");
-                    return false;
-                }
-
-                if ($postcode.val() === "" || $postcode.val() == null) {
-                    bootbox.alert("Please search and choose existing postcode!");
-                    $("#inputPostcode-flexdatalist").val("");
-                    return false;
-                }
-
-                if ($town.val() === "" || $town.val() == null) {
-                    bootbox.alert("Please search and choose existing town!");
-                    $("#inputTown-flexdatalist").val("");
-                    return false;
-                }
-
-                if ($district.val() === "" || $district.val() == null) {
-                    bootbox.alert("Please search and choose existing district!");
-                    $("#inputDistrict-flexdatalist").val("");
-                    return false;
-                }
-
-                if ($state.val() === "" || $state.val() == null) {
-                    bootbox.alert("Please search and choose existing state!");
-                    $("#inputState-flexdatalist").val("");
-                    return false;
-                }
-
-                if ($country.val() === "" || $country.val() == null) {
-                    bootbox.alert("Please search and choose existing country!");
-                    $("#inputCountry-flexdatalist").val("");
-                    return false;
-                }
-
-                if ($bankAcc.val() === "") {
-                    bootbox.alert("Please enter the bank account number!");
-                    return false;
-                }
-
-                if ($phone.val() === "" || !validatePhonenumber($phone.val())) {
-                    bootbox.alert("Please enter the phone number with valid phone number!");
-                    return false;
-                }
-
-                if ($email.val() === "" || !ValidateEmail($email.val())) {
-                    bootbox.alert("Please enter the email with valid email!");
-                    return false;
-                }
-
-                if ($package.val() === "" || $package.val() == null) {
-                    bootbox.alert("Please select a tenant type!");
-                    return false;
-                }
-
-                if (!$file1.find("img").length) {
-                    bootbox.alert("Please upload your logo!");
-                    return false;
-                }
-
                 
+                var $time_input = $(".time-input");
+                
+                $time_input.each(function(i){
+                    if($(this).val()===""){
+                        bootbox.alert("Please enter all operation hours!");
+                        return false;
+                    }
+                });
+        
+                var $time_input_false = $(".time-input.alert-danger");
+                if ($time_input_false.length > 0) {
+                    bootbox.alert("Please enter the operation hours using 'HH:mm' format!");
+                    return false;
+                } 
+                
+                var $package = $("#serviceList .service-box.alert-success");
+                if($package.length < 1){
+                    bootbox.alert("Please select at least one service type.");
+                    return false;
+                }
+                
+                var $file1= $("#file-drag1");
+                if (!$file1.find("img").length) {
+                    bootbox.alert("Please upload your annual practicing certificate!");
+                    return false;
+                }
+                
+                var $file2= $("#file-drag2");
+                if (!$file1.find("img").length) {
+                    bootbox.alert("Please upload your business license certificate!");
+                    return false;
+                }
+
+
                 return true;
 
             }
 
-            function getEmailPhone() {
-                $.ajax({
-                    type: 'GET',
-                    dataType: 'json',
-                    timeout: 60000,
-                    url: 'control/getBasicInfo.jsp',
-                    success: function (data, textStatus, jqXHR) {
-                        console.log("Data: " + JSON.stringify(data));
-                        $("#inputEmail").val(data.email);
-                        $("#inputMobile").val(data.phone);
-                    },
-                    error: function (jqXHR, textStatus, errorThrown) {
-                        console.log("Fail get basic info: " + errorThrown);
-                    }
-                });
-            }
 
             function initDropzone(boxID, btnID) {
                 $("#" + boxID).dropzone({
@@ -585,36 +591,6 @@
                 });
             }
 
-            //init felx-data-list
-            function initFlexData(elemInputID, elemDivID, url, objData) {
-                $('#' + elemInputID).flexdatalist({
-                    minLength: 1,
-                    searchIn: 'name',
-                    searchDelay: 1000,
-                    selectionRequired: true,
-                    url: url,
-                    visibleProperties: 'name',
-                    cache: false,
-                    valueProperty: 'value',
-                    searchContain: false,
-                    searchByWord: true,
-                    params: {
-                        master_cd: objData
-                    }
-                });
-
-                $('#' + elemInputID).on('before:flexdatalist.data', function (response) {
-                    $('#' + elemDivID).html('<img src="../assets/img/LoaderIcon.gif" />');
-                });
-                $('#' + elemInputID).on('after:flexdatalist.data', function (response) {
-                    $('#' + elemDivID).html('');
-                });
-                $('#' + elemInputID + '-flexdatalist').on('keyup', function (event) {
-                    if ($(this).val().trim() === "") {
-                        $('#' + elemDivID).html('');
-                    }
-                });
-            }
 
             function populateSelectList($select, master_cd) {
                 var input = {
@@ -641,7 +617,7 @@
                 });
             }
 
-            function getPackageOption() {
+            function getServiceOption() {
                 var $package = $("#serviceList");
                 $.ajax({
                     type: 'GET',
