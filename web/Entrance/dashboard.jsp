@@ -51,14 +51,13 @@
 
                   
                     <div class="col-xs-6 col-sm-6 col-md-3">
-                        <a href="#" class="thumbnail">
+                        <a href="../Jom_Medic/service_info.jsp" class="thumbnail">
                             <span class="icon_contain">
                                 <i class="iconsmind-Hospital" aria-hidden="true" style="color: #DE3975;font-size: 4em;"></i>
                             </span>
                             <div class="kotak text-center">
                                 JOMLOKA Medic
-                                <h5>Coming soon!</h5>
-                            </div>
+                           </div>
                         </a>
                     </div>
                                              

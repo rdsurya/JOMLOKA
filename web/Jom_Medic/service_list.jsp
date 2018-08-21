@@ -1,13 +1,11 @@
 <%-- 
-    Document   : tenant_info
-    Created on : Apr 16, 2018, 3:57:03 AM
+    Document   : service_list
+    Created on : Aug 21, 2018, 4:50:40 PM
     Author     : user
 --%>
 
-<%@include file="../Entrance/validateSession.jsp" %>
-<%@include file="validateModuleAccess.jsp" %>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="../Entrance/validateSession.jsp" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,7 +14,14 @@
         <!-- header -->
         <%@include file="libraries/headLibrary.jsp" %>
         <%@include file = "../assets/header.html" %>
+        <link href="libraries/care.css" rel="stylesheet" type="text/css"/>
         <!-- header -->
+        <style type="text/css">
+            .salah{
+                background-color: #ef2828 !important;
+                color: white !important;
+            }
+        </style>
     </head>
 
     <body>
@@ -42,17 +47,21 @@
                                         <ul class="nav nav-tabs ">
                                             <li class="active">
                                                 <a href="#tab_default_1" data-toggle="tab" >
-                                                    TENANT</a>
+                                                    Services</a>
                                             </li>                                            
                                         </ul>
                                         <!-- tab content -->
                                         <div class="tab-content">
                                             <div class="tab-pane active" id="tab_default_1">
-                                                <div id="tenantMain">
+                                                <div id="serviceTab">
+                                                    <!--put body form here-->
 
-                                                </div>                                               
+                                                    <!--put body form here-->
+                                                </div>  
+                                                <div id="serviceTable" class="table-guling">
+                                                    
+                                                </div>
                                             </div>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -70,27 +79,29 @@
 
         <!-- Placed at the end of the document so the pages load faster -->
         <%@include file = "libraries/footLibrary.jsp" %>
-       
+
         <script type="text/javascript" src="../assets/js/rd.jquery.preventKey.js"></script>
         <script type="text/javascript" src="../assets/js/rd.jquery.check-file.js"></script>
         <script type="text/javascript" src="../assets/js/rd.jquery.validator.js"></script>
+        <script src="../assets/js/dropzone.js"></script>
         <!-- Placed at the end of the document so the pages load faster -->
 
 
         <script>
+           
+            $("#serviceTab").load("service_list/service.jsp");
+            $("#serviceTable").load("service_list/service_table.jsp");
 
-            // createScreenLoading();
             $(function () {
                 preventPipeKeyPress(document);
                 preventPipeKeyUp("input");
                 codeValidityKeyUp(".code-input");
+
             });
-
-
-            $("#tenantMain").load("tenant_info/tenant_main.jsp");
 
         </script>
 
     </body>
 
 </html>
+

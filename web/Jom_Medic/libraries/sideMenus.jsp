@@ -8,14 +8,13 @@
     <div class="brand"></div>
     <!-- logo -->
     <div class="logo">
-        <img src="../assets/img/hiscare-icon-web.svg">
+        <img src="../assets/img/Jomloka-logo.svg">
     </div>
     <!-- logo -->
    
     <!-- profile Sidebar -->
     <ul class="nav nav-sidebar" id="side-menu">
-        <li><a href="Home"><i class="fa fa-hospital-o" aria-hidden="true"></i>Health Facility</a></li>           
-        <li><a href="Personal"><i class="fa fa-user" aria-hidden="true"></i>Personal Information</a></li>           
-        <li><a href="Tenant_Info"><i class="fa fa-building" aria-hidden="true"></i>Tenant Information</a></li>           
+        <li><a href="service_info.jsp"><i class="fa fa-hospital-o" aria-hidden="true"></i>JOMLOKA-Medic</a></li>           
+        <li><a href="service_list.jsp"><i class="fa fa-list-alt" aria-hidden="true"></i>Services</a></li>           
     </ul>  
 </div>

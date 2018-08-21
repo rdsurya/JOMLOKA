@@ -11,7 +11,7 @@
 <%@page import="ADM_helper.MySession"%>
 <%
     if (session.getAttribute("USER_ID") == null) {
-        response.sendRedirect("../index.jsp");
+        response.sendRedirect("../Main");
         return;
     } else {
         String id = (String) session.getAttribute("USER_ID");

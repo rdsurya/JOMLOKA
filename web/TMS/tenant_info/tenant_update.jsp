@@ -46,7 +46,7 @@
     
     RMIConnector rmi = new RMIConnector();
     if(rmi.setQuerySQL(con.HOST, con.PORT, query)){
-        json.put("msg", "Tenant is registered successfully.");
+        json.put("msg", "Tenant is updateds successfully.");
         json.put("isValid", true);
         out.print(json.toString());
        

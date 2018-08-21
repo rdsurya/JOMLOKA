@@ -148,161 +148,146 @@
                             <h2>Operation Hours</h2>
                             <h5>Please enter the time using 24-hour system('HH:mm') format. Example '01:30'. Enter 'OFF' for holiday.</h5>
                             <div class="row">
-                                <div class="col-md-1">
+                                <div class="col-md-2">
                                     <label class="control-label" for="company_name">Monday:</label>
                                 </div>
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input id="inputFrom1" type="text" class="form-control input-lg time-input time-from" required>
+                                            <input id="inputFrom1" type="text" class="form-control input-lg time-input time-from" required placeholder="Start">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-1">
-                                    <label class="control-label text-center" for="company_name">To</label>
                                 </div>
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input id="inputTo1" type="text" class="form-control input-lg time-input time-to" required>
+                                            <input id="inputTo1" type="text" class="form-control input-lg time-input time-to" required placeholder="End">
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-1">
+                                <div class="col-md-2">
                                     <label class="control-label" for="company_name">Tuesday:</label>
                                 </div>
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input id="inputFrom2" type="text" class="form-control input-lg time-input time-from" required>
+                                            <input id="inputFrom2" type="text" class="form-control input-lg time-input time-from" required placeholder="Start">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-1">
-                                    <label class="control-label text-center" for="company_name">To</label>
-                                </div>
+                               
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input id="inputTo2" type="text" class="form-control input-lg time-input time-to" required>
+                                            <input id="inputTo2" type="text" class="form-control input-lg time-input time-to" required placeholder="End">
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-1">
+                                <div class="col-md-2">
                                     <label class="control-label" for="company_name">Wednesday:</label>
                                 </div>
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input id="inputFrom3" type="text" class="form-control input-lg time-input time-from" required>
+                                            <input id="inputFrom3" type="text" class="form-control input-lg time-input time-from" required placeholder="Start">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-1">
-                                    <label class="control-label text-center" for="company_name">To</label>
-                                </div>
+                                
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input id="inputTo3" type="text" class="form-control input-lg time-input time-to" required>
+                                            <input id="inputTo3" type="text" class="form-control input-lg time-input time-to" required placeholder="End">
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-1">
+                                <div class="col-md-2">
                                     <label class="control-label" for="company_name">Thursday:</label>
                                 </div>
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input id="inputFrom4" type="text" class="form-control input-lg time-input time-from" required>
+                                            <input id="inputFrom4" type="text" class="form-control input-lg time-input time-from" required placeholder="Start">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-1">
-                                    <label class="control-label text-center" for="company_name">To</label>
-                                </div>
+                                
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input id="inputTo4" type="text" class="form-control input-lg time-input time-to" required>
+                                            <input id="inputTo4" type="text" class="form-control input-lg time-input time-to" required placeholder="End">
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-1">
+                                <div class="col-md-2">
                                     <label class="control-label" for="company_name">Friday:</label>
                                 </div>
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input id="inputFrom5" type="text" class="form-control input-lg time-input time-from" required>
+                                            <input id="inputFrom5" type="text" class="form-control input-lg time-input time-from" required placeholder="Start">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-1">
-                                    <label class="control-label text-center" for="company_name">To</label>
-                                </div>
+                               
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input id="inputTo5" type="text" class="form-control input-lg time-input time-to" required>
+                                            <input id="inputTo5" type="text" class="form-control input-lg time-input time-to" required placeholder="End">
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-1">
+                                <div class="col-md-2">
                                     <label class="control-label" for="company_name">Saturday:</label>
                                 </div>
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input id="inputFrom6" type="text" class="form-control input-lg time-input time-from" required>
+                                            <input id="inputFrom6" type="text" class="form-control input-lg time-input time-from" required placeholder="Start">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-1">
-                                    <label class="control-label text-center" for="company_name">To</label>
-                                </div>
+                               
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input id="inputTo6" type="text" class="form-control input-lg time-input time-to" required>
+                                            <input id="inputTo6" type="text" class="form-control input-lg time-input time-to" required placeholder="End">
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-1">
+                                <div class="col-md-2">
                                     <label class="control-label" for="company_name">Sunday:</label>
                                 </div>
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input id="inputFrom7" type="text" class="form-control input-lg time-input time-from" required>
+                                            <input id="inputFrom7" type="text" class="form-control input-lg time-input time-from" required placeholder="Start">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-1">
-                                    <label class="control-label text-center" for="company_name">To</label>
-                                </div>
+                                
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input id="inputTo7" type="text" class="form-control input-lg time-input time-to" required>
+                                            <input id="inputTo7" type="text" class="form-control input-lg time-input time-to" required placeholder="End">
                                         </div>
                                     </div>
                                 </div>

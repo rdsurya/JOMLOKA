@@ -49,7 +49,7 @@
         <!-- Menu Footer-->
         <li class="user-footer" style="display: table; width: 100%;">
             <div class="text-left" style="display: table-cell">
-                <button type="button" class="btn btn-default btn-flat" onclick="window.location.href = 'personal.jsp'">Manage Account</button>
+                <button type="button" class="btn btn-default btn-flat" onclick="window.location.href = '../TMS/personal.jsp'">Manage Account</button>
             </div>
             <div class="text-right" style="display: table-cell">
                 <a href="../Entrance/destroySession.jsp" id="btnCIS_LOGOUT" class="btn btn-default btn-flat">Sign out</a>

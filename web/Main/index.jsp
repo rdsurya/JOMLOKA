@@ -149,31 +149,42 @@
                             <fieldset class="steps step0 activate">
                                 <h2>MyJOMLOKA</h2>
                                 <div class="form-group">
-                                    <div class="form-group grp-login-id">
+                                    <div class="form-group grp-login grp-login-id" id="login-id-group">
                                         <div class="col-md-12"><label class="control-label" for="company_name">User ID*:</label></div>
                                         <div class="col-md-12">
                                             <input id="inputUserID" name="inputUserID" type="text" class="form-control input-lg" required maxlength="150">
                                         </div>
                                     </div>
-                                    <div class="form-group grp-login-ic">
+                                    <div class="form-group grp-login grp-login-ic">
                                         <div class="col-md-12"><label class="control-label" for="company_name">NRIC*:</label></div>
                                         <div class="col-md-12">
                                             <p><span style="color: red; margin-bottom: 10px;">Please log in using your IC number / Passport number and your password</span></p>
                                             <input id="inputUserIC" name="inputUserIC" type="text" class="form-control input-lg" required maxlength="150">
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group grp-login" id="login-pwd-group">
                                         <div class="col-md-12"><label class="control-label" for="company_name">Password*:</label></div>
                                         <div class="col-md-12">
                                             <input id="inputPassword1" name="inputPassword1" type="password" class="form-control input-lg" required maxlength="50">
                                         </div>
                                     </div>
+                                    <div class="form-group grp-login grp-forgot" id="question-group">
+                                        <div class="col-md-12"><label class="control-label" for="inputAnswer" id="securityQuestion">?</label></div>
+                                        <div class="col-md-12">
+                                            <input id="inputAnswer" name="inputAnswer" type="text" class="form-control input-lg" required maxlength="255" placeholder="Answer">
+                                        </div>
+                                    </div>
 
                                 </div>
+                                <div class="text-left">
+                                    <a class="grp-login grp-login-id" id="btnForgot">Forgot Password?</a>
+                                </div>
                                 <div class="text-right">
-                                    <button id="btnBack" class="btn btn-rounded btn-default btn-lg login-btn grp-login-ic"><i style="margin-top: 3px;" class="fa fa-times fa-lg pull-left"></i> Back</button>
-                                    <button id="btnLogin" class="btn btn-rounded btn-mkag btn-lg login-btn grp-login-id">Login <i style="margin-top: 3px;" class="fa fa-angle-right fa-lg pull-right"></i></button>
-                                    <button id="btnLoginIC" class="btn btn-rounded btn-mkag btn-lg login-btn grp-login-ic">Login  <i style="margin-top: 3px;" class="fa fa-angle-right fa-lg pull-right"></i></button>
+                                    <button id="btnBack" class="btn btn-rounded btn-default btn-lg login-btn grp-login grp-login-ic"><i style="margin-top: 3px;" class="fa fa-times fa-lg pull-left"></i> Back</button>
+                                    <button id="btnLogin" class="btn btn-rounded btn-mkag btn-lg login-btn grp-login grp-login-id">Login <i style="margin-top: 3px;" class="fa fa-angle-right fa-lg pull-right"></i></button>
+                                    <button id="btnLoginIC" class="btn btn-rounded btn-mkag btn-lg login-btn grp-login grp-login-ic">Login  <i style="margin-top: 3px;" class="fa fa-angle-right fa-lg pull-right"></i></button>
+                                    <button id="btnGetQuestion" class="btn btn-rounded btn-mkag btn-lg login-btn grp-login grp-forgot">Get Question <i style="margin-top: 3px;" class="fa fa-angle-right fa-lg pull-right"></i></button>
+                                    <button id="btnGetPassword" class="btn btn-rounded btn-mkag btn-lg login-btn grp-login grp-forgot">Get Password <i style="margin-top: 3px;" class="fa fa-angle-right fa-lg pull-right"></i></button>
                                 </div>
                             </fieldset>
                         </form>                      
@@ -209,37 +220,21 @@
 
                 $(".grp-login-ic").hide();
                 $(".grp-login-id").show();
+                $(".grp-forgot").hide();
 
                 var $btnLogin = $("#btnLogin"),
                         $btnLoginIC = $("#btnLoginIC"),
                         $btnBack = $("#btnBack"),
-                        $formLogin = $("#zeroForm");
+                        $formLogin = $("#zeroForm"),
+                        $btnForgot = $("#btnForgot"),
+                        $btnGetQuestion = $("#btnGetQuestion"),
+                        $btnGetPassword = $("#btnGetPassword");
 
 
                 codeEmailValidityKeyUp("#inputUserID");
                 preventPipeKeyPress("input");
                 preventPipeKeyUp("input");
-                
-//                $("#zeroForm").on("keyup", function(event){
-//                    event.preventDefault();
-//                    var $nric = $("#inputUserIC");
-//                    if(event.keyCode === 13){
-//                        if($nric.val()===""){
-//                            $btnLogin.click();
-//                            console.log("Login ID");
-//                        }
-//                        else if($nric.val()!==""){
-//                            $btnLoginIC.click();
-//                            console.log("Login IC");
-//                        }
-//                        else{
-//                            return false;
-//                        }
-//                        
-//                        return event.keyCode;
-//                    }                   
-//                    
-//                });
+
 
                 $btnLogin.on("click", function (event) {
                     event.preventDefault();
@@ -282,21 +277,18 @@
 
                             if (!data.isRedirect) {
                                 bootbox.alert(data.msg);
-                                
-                            }
 
-                            else if (data.url === "ReSign-in") {
+                            } else if (data.url === "ReSign-in") {
                                 bootbox.alert(data.msg);
                                 $(".grp-login-id").hide();
                                 $(".grp-login-ic").show();
                                 $password.val("");
-                                
-                            }
-                            else{
+
+                            } else {
                                 window.location = data.url;
                             }
 
-                            
+
 
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
@@ -344,13 +336,12 @@
 
                             if (!data.isRedirect) {
                                 bootbox.alert(data.msg);
-                                
-                            }
-                            else{
-                               window.location = data.url;  
+
+                            } else {
+                                window.location = data.url;
                             }
 
-                           
+
 
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
@@ -365,16 +356,113 @@
                 });//end button login IC
 
 
-                $btnBack.on("click", function () {
+                $btnForgot.on("click", function (event) {
+                    event.preventDefault();
+                    $('.grp-login').hide();
+                    $('#login-id-group').show();
+                    $("#btnGetQuestion").show();
+                    $btnBack.show();
+                });// end btnForgot
+
+                $btnGetQuestion.on("click", function (event) {
+                    event.preventDefault();
+                    var $userID = $("#inputUserID");
+                    if ($userID.val() === "") {
+                        bootbox.alert("Please enter your User ID!");
+                        return;
+                    }
+
+                    var input = {user_id: $userID.val()};
+                    var oriText = $(this).html();
+                    $formLogin.prop("disabled", true);
+                    $(this).html("Loading...");
+
+                    $.ajax({
+                        type: 'POST',
+                        timeout: 60000,
+                        data: input,
+                        url: "control/getSecurityQuestion.jsp",
+                        dataType: 'json',
+                        success: function (data, textStatus, jqXHR) {
+                            if (data.isValid) {
+                                $(this).hide();
+                                $("#login-id-group").hide();
+                                $btnGetQuestion.hide();
+                                $("#question-group").show();
+                                $("#btnGetPassword").show();
+                                $("#securityQuestion").text(data.question + " :");
+                            } else {
+                                bootbox.alert(data.msg);
+                                console.log(data.sql);
+                            }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            console.log("Error :" + errorThrown);
+                        },
+                        complete: function (jqXHR, textStatus) {
+                            $formLogin.prop("disabled", false);
+                            $btnGetQuestion.html(oriText);
+                        }
+                    });
+
+                });
+
+                $btnGetPassword.on("click", function (event) {
+                    event.preventDefault();
+                    var $answer = $("#inputAnswer"),
+                            $userID = $("#inputUserID");
+
+                    if ($answer.val() === "") {
+                        bootbox.alert("Please enter your answer!");
+                        return;
+                    }
+
+                    var input = {
+                        user_id: $userID.val(),
+                        answer: $answer.val()
+                    };
+
+                    $formLogin.prop("disabled", true);
+                    var oriText = $(this).html();
+                    $(this).html("Loading...");
+
+                    $.ajax({
+                        type: 'POST',
+                        url: "control/evalAnswer.jsp",
+                        data: input,
+                        dataType: 'json',
+                        success: function (data, textStatus, jqXHR) {
+                            if(data.isValid){
+                                bootbox.alert(data.msg, function(){
+                                    $btnBack.click();
+                                });
+                            }
+                            else{
+                                bootbox.alert(data.msg);
+                                console.log(data.sql);
+                            }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            console.log("Error: "+errorThrown);
+                        },
+                        complete: function (jqXHR, textStatus) {
+                            $formLogin.prop("disabled", false);
+                            $btnGetPassword.html(oriText);
+                        }
+                    });
+                });
+
+
+                $btnBack.on("click", function (event) {
+                    event.preventDefault();
                     $(".grp-login-ic").hide();
                     $(".grp-login-id").show();
+                    $(".grp-forgot").hide();
+                    $("#login-pwd-group").show();
                     $formLogin[0].reset();
 
                 });// end btn back
 
-
-                // copy
-                //balapaCop("Step by Step Form", "#999");
 
             });//end ready
 
